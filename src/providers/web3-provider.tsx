@@ -7,13 +7,13 @@ import {
   darkTheme,
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
-import { baseSepolia, mainnet } from 'wagmi/chains';
+import { base, mainnet } from 'wagmi/chains';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 const config = getDefaultConfig({
   appName: 'VibeCheck',
   projectId: 'a58742c355f35b43632fcf7b311394a1', // Replace with your WalletConnect Project ID
-  chains: [baseSepolia, mainnet],
+  chains: [base, mainnet],
   ssr: true, 
 });
 
