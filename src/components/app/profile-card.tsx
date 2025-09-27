@@ -3,7 +3,7 @@
 import { useAccount } from 'wagmi';
 import { useProfile } from '@/providers/profile-provider';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Award, BarChart, Gem } from 'lucide-react';
+import { Award, Gem } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 function truncateAddress(address: string) {
@@ -14,8 +14,6 @@ function truncateAddress(address: string) {
 export function ProfileCard() {
   const { address } = useAccount();
   const { earnedBadges, getVibes } = useProfile();
-
-  const rank = 1234; // Simulated rank
 
   return (
     <Card className="bg-card/80 backdrop-blur-sm shadow-lg">
@@ -30,7 +28,7 @@ export function ProfileCard() {
         </div>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center pt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center pt-4">
           <div className="flex flex-col items-center justify-center p-4 bg-background/50 rounded-lg">
             <Award className="w-8 h-8 text-primary mb-2" />
             <p className="text-2xl font-bold">{earnedBadges.length}</p>
@@ -40,11 +38,6 @@ export function ProfileCard() {
             <Gem className="w-8 h-8 text-primary mb-2" />
             <p className="text-2xl font-bold">{getVibes()}</p>
             <p className="text-sm text-muted-foreground">Vibes</p>
-          </div>
-          <div className="flex flex-col items-center justify-center p-4 bg-background/50 rounded-lg">
-            <BarChart className="w-8 h-8 text-primary mb-2" />
-            <p className="text-2xl font-bold">#{rank}</p>
-            <p className="text-sm text-muted-foreground">Rank</p>
           </div>
         </div>
       </CardContent>
