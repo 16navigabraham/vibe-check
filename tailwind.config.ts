@@ -92,17 +92,23 @@ export default {
           '0%': { transform: 'translateY(-100vh) rotate(0deg)', opacity: '1' },
           '100%': { transform: 'translateY(100vh) rotate(720deg)', opacity: '0' },
         },
-        'gradient-shine': {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+        'typing-h1': {
+          'from': { width: '0' },
+          'to': { width: '19ch' }
+        },
+        'typing-p': {
+          'from': { width: '0' },
+          'to': { width: '80ch' }
+        },
+        'blink-caret': {
+          'from, to': { 'border-color': 'transparent' },
+          '50%': { 'border-color': 'hsl(var(--primary))' },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'confetti-fall': 'confetti-fall 5s linear infinite',
-        'gradient-shine': 'gradient-shine 5s ease infinite',
       },
     },
   },
