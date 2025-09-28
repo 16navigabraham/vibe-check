@@ -9,7 +9,7 @@ export function ConnectWalletLanding() {
         Welcome to VibeCheck
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mb-8 overflow-hidden whitespace-nowrap w-0 border-r-4 border-r-primary animate-typing-p">
-        Complete fun challenges, prove your vibes, and earn unique PoV badges on the blockchain.
+        Complete fun challenges, prove your vibes, and earn unique PoV badges.
       </p>
       <div className="transform scale-125 animate-in fade-in zoom-in-50 duration-1000 delay-[5s] fill-mode-backwards">
         <ConnectButton label="Connect Wallet to Start" />

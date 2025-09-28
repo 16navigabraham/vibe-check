@@ -66,8 +66,8 @@
   }
   .animate-typing-p {
     width: 0;
-    animation: typing-p 3s steps(89) 2s,
-      blink-caret 0.75s step-end 8 forwards;
+    animation: typing-p 3s steps(69) 2s,
+      blink-caret 0.75s step-end 6 forwards;
     animation-delay: 0s, 2s;
     animation-fill-mode: forwards;
   }
@@ -80,7 +80,7 @@
 
 @keyframes typing-p {
   from { width: 0; }
-  to { width: 89ch; }
+  to { width: 69ch; }
 }
 
 @keyframes blink-caret {
