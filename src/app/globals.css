@@ -60,14 +60,15 @@
 
 @layer utilities {
   .animate-typing-h1 {
-    animation: typing-h1 2s steps(21) 1,
-      blink-caret 0.75s step-end infinite;
+    animation: typing-h1 2s steps(21),
+      blink-caret 0.75s step-end 3 forwards;
     animation-fill-mode: forwards;
   }
   .animate-typing-p {
     width: 0;
-    animation: typing-p 3s steps(80) 2s 1,
-      blink-caret 0.75s step-end 2s infinite;
+    animation: typing-p 3s steps(80) 2s,
+      blink-caret 0.75s step-end 6 forwards;
+    animation-delay: 0s, 2s;
     animation-fill-mode: forwards;
   }
 }
