@@ -92,18 +92,6 @@ export default {
           '0%': { transform: 'translateY(-100vh) rotate(0deg)', opacity: '1' },
           '100%': { transform: 'translateY(100vh) rotate(720deg)', opacity: '0' },
         },
-        'typing-h1': {
-          'from': { width: '0' },
-          'to': { width: '19ch' }
-        },
-        'typing-p': {
-          'from': { width: '0' },
-          'to': { width: '80ch' }
-        },
-        'blink-caret': {
-          'from, to': { 'border-color': 'transparent' },
-          '50%': { 'border-color': 'hsl(var(--primary))' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',

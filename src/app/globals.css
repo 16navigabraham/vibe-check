@@ -60,10 +60,34 @@
 
 @layer utilities {
   .animate-typing-h1 {
-    animation: typing-h1 2s steps(19, end), blink-caret .75s step-end infinite;
+    animation: typing-h1 2s steps(21) 1,
+      blink-caret 0.75s step-end infinite;
+    animation-fill-mode: forwards;
   }
   .animate-typing-p {
-    animation: typing-p 3s steps(80, end), blink-caret .75s step-end 3s infinite;
+    width: 0;
+    animation: typing-p 3s steps(80) 2s 1,
+      blink-caret 0.75s step-end 2s infinite;
     animation-fill-mode: forwards;
+  }
+}
+
+@keyframes typing-h1 {
+  from { width: 0; }
+  to { width: 21ch; }
+}
+
+@keyframes typing-p {
+  from { width: 0; }
+  to { width: 80ch; }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(var(--primary));
   }
 }
